@@ -10,10 +10,14 @@ class Namectivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_namectivity)
-        findViewById<View>(R.id.GoResultButton).setOnClickListener {
+        findViewById<View>(R.id.btnGo).setOnClickListener {
             val intent = Intent(this,ResultActivity::class.java)
             startActivity(intent)
         }
         //Toast.makeText(this,"Name Activity", Toast.LENGTH_LONG).show()
+
+        findViewById<View>(R.id.btnBack).setOnClickListener {
+            finish()
+        }
     }
 }
