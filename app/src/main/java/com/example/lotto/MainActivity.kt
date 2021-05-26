@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.randomCard).setOnClickListener {
             val intent = Intent(this,ResultActivity::class.java)
             intent.putIntegerArrayListExtra("result",ArrayList(getRandomLottoNumbers()))
+            startActivity(intent)
 
         }
 
