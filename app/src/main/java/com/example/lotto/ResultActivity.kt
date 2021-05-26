@@ -23,6 +23,7 @@ class ResultActivity : AppCompatActivity() {
     private fun updateLottoBallImage(result:List<Int>) {
 
 
+
         // val lottoImageStartId2 = R.drawable.ball_15(
         // val lottoImageStartId3 = R.drawable.ball_23
         val imageView18 = findViewById<ImageView>(R.id.imageView18)
