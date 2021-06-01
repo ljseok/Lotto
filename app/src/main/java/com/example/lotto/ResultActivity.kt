@@ -3,7 +3,10 @@ package com.example.lotto
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ResultActivity : AppCompatActivity() {
     val lottoImageStartId = R.drawable.ball_01
@@ -14,10 +17,20 @@ class ResultActivity : AppCompatActivity() {
 
         //Toast.makeText(this,"Result Activity", Toast.LENGTH_LONG).show()
 
-        val result = intent.getIntArrayExtra("result") ?: return
+        val result = intent.getIntegerArrayListExtra("result") //?: return
+        val result_sorted = result?.let{result.sortedBy { it } }
+        val strConstellation = intent.getStringArrayExtra("constellation")
 
-        result?.let {
-            updateLottoBallImage(result.sortedBy { it })
+
+
+       // result?.let {
+            //updateLottoBallImage(result.sortedBy { it })
+
+
+        strConstellation?.let{
+            val resultLabel = findViewById<TextView>(R.id.Result_label)
+            resultLabel.text= "${strConstellation}의 ${SimpleDateFormat("yyyy년 MM월 dd일").format(Date())}" +
+                    "로또번호입니다"
         }
     }
     private fun updateLottoBallImage(result:List<Int>) {

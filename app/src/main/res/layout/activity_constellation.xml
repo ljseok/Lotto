@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/constellation" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtConstell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/imageView3"

@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
             return list.subList(0,6)
         }
+
 
         findViewById<View>(R.id.randomCard).setOnClickListener {
             val intent = Intent(this,ResultActivity::class.java)
